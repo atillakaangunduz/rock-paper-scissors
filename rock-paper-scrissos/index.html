@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+ 
+<style>
+body{
+    background-color: linen;
+}
+
+#results,#youranswer{
+    margin-left: 15px;
+}
+    
+#all{
+    margin-left: 25px;
+    border: 1px solid black;
+    height: 700px;
+    width: auto;
+    border-radius: 55px;
+    background-color: blanchedalmond;
+    margin-right: 25px;
+    
+}
+
+#header{
+    background-color: lightcyan;
+    height: 100px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0px;
+    border-radius: 55px;
+}
+
+
+button{
+    background-color: rgb(248, 246, 246);
+    border-radius: 15px;
+    
+}
+
+#selection{
+    margin-top: 75px;
+   margin-left: 15px;
+    margin-right: 10px;
+    
+}
+
+img{
+width: 80px;
+height: 80px;
+}
+
+</style>
+<body>
+<div id="all">
+<div id="header">
+<h1>Rock - Paper - Scrissors</h1>
+
+</div>
+
+<div id="youranswer">
+
+<p>YOUR ANSWER</p>
+<p id="personanswer"></p>
+
+
+
+</div>
+
+<div id="selection">
+<table>
+<tr>
+<td><button id="rock"  onclick="answer1()"><img src="816-8161371_rock-paper-scissor-icon-png.png"></button></td>
+<td><button id="paper"  onclick="answer2()"><img src="images.png"></button></td>
+<td><button id="scrissors"  onclick="answer3()"><img src="111-1114370_rock-paper-scissors-rock-paper-scissors-clipart.png"></button></td>
+</tr>
+</table>
+
+</div>
+<div id="results">
+<p>COMPUTER ANSWER</p>
+<p id="comanswer"> </p>
+<p>RESULT</p>
+ <p id="result"> </p>
+</div>
+</div>
+</body>
+<script>
+
+// 1 = rock 
+// 2 = paper
+// 3 = scissors
+
+
+function answer1(){
+  document.getElementById("personanswer").innerHTML = "<img src='816-8161371_rock-paper-scissor-icon-png.png'>";
+    var computer;
+    computer = Math.floor(Math.random() * 3) + 1 ;
+    if( computer == 2 ){
+            document.getElementById("result").innerHTML="Lose";
+            document.getElementById("comanswer").innerHTML = "<img src='images.png'>";
+     }
+
+     else if(computer == 3 ){
+            document.getElementById("result").innerHTML="Win";
+            document.getElementById("comanswer").innerHTML = "<img src='111-1114370_rock-paper-scissors-rock-paper-scissors-clipart.png'>";
+     }
+
+     else{
+        document.getElementById("result").innerHTML="Draw";
+        document.getElementById("comanswer").innerHTML = "<img src='816-8161371_rock-paper-scissor-icon-png.png'>";
+     }
+    
+}
+   
+
+function answer2(){
+    document.getElementById("personanswer").innerHTML = "<img src='images.png'>";
+    var computer = Math.floor(Math.random()*3)+1
+
+   if(computer == 1 ){
+            document.getElementById("result").innerHTML="Win";
+            document.getElementById("comanswer").innerHTML = "<img src='816-8161371_rock-paper-scissor-icon-png.png'>";
+     }
+
+     
+else if( computer == 3 ){
+            document.getElementById("result").innerHTML="Lose";
+            document.getElementById("comanswer").innerHTML = "<img src='111-1114370_rock-paper-scissors-rock-paper-scissors-clipart.png'>";
+
+     }
+
+else{
+    document.getElementById("result").innerHTML="Draw";
+    document.getElementById("comanswer").innerHTML = "<img src='images.png'>";
+
+ }
+}
+
+
+ function answer3(){
+    document.getElementById("personanswer").innerHTML = "<img src='111-1114370_rock-paper-scissors-rock-paper-scissors-clipart.png'>";
+    var computer = Math.floor(Math.random()*3)+1
+
+  if(computer == 1 ){
+            document.getElementById("result").innerHTML="Lose";
+            document.getElementById("comanswer").innerHTML = "<img src='816-8161371_rock-paper-scissor-icon-png.png'>";
+     }
+
+     
+     else if( computer == 2 ){
+            document.getElementById("result").innerHTML="Win";
+            document.getElementById("comanswer").innerHTML = "<img src='images.png'>";
+     }
+
+else{
+ document.getElementById("result").innerHTML="Draw";
+ document.getElementById("comanswer").innerHTML = "<img src='111-1114370_rock-paper-scissors-rock-paper-scissors-clipart.png'>";
+}
+
+}
+
+
+    
+    
+     
+
+
+
+
+
+</script>
+
+
+</html>
